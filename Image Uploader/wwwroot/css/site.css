@@ -1,0 +1,148 @@
+﻿button{
+    cursor: pointer;
+}
+.m-container{
+    width: 768px;
+    margin: 20px auto;
+}
+.m-left-side{
+    float: left;
+}
+.m-right-side {
+    float: left;
+    padding: 9px;
+}
+    .m-sides::after, .m-image-cards::after {
+        clear: both;
+        display: block;
+        content: "";
+    }
+.m-image-cards {
+    width: 625px;
+}
+.m-image-upload-box {
+    margin: 15px;
+    position: relative;
+    height: 105px;
+}
+.m-image-upload-btn {
+    border: 5px solid #82AEBF;
+    width: 95px;
+    border-radius: 5px;
+    padding: 10px;
+    height: 105px;
+}
+.m-image-upload-btn img{
+    width: 100%;
+}
+.m-button {
+    border-radius: 5px;
+    background: linear-gradient(180deg, #FBFBFB, #CDCDCD);
+    border: 1px solid #cdcdcd;
+    font-size: 14px;
+    padding: 3px 8px;
+    font-weight: 500;
+    display: block;
+    margin: 5px;
+    width: 78px;
+    margin: 5px auto;
+}
+    .m-button.disabled {
+        opacity: 0.53;
+        cursor: not-allowed;
+    }
+
+.m-image-delete {
+    position: absolute;
+    top: -17px;
+    right: -18px;
+    background: #387E98;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+}
+.m-alert {
+    background: #ff8282;
+    padding: 14px;
+    color: white;
+    font-size: 17px;
+    margin: 10px 0;
+    transition: opacity linear 0.5s;
+}
+#upload-photo {
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    width: 95px;
+    height: 95px;
+    cursor: pointer;
+}
+
+.dragging {
+    opacity: .5;
+}
+.dd-vc {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dd-transition {
+    transition: all 0.3s ease;
+}
+
+.dd-shadow {
+    box-shadow: 0 0 3px 1px rgba(0,0,0,0.3);
+}
+
+#dragDrop {
+    width: 685px;
+    position: relative;
+}
+
+.dd-slot {
+    float: left;
+    outline-offset: -15px;
+    position: relative;
+    pointer-events: none;
+}
+
+
+.dd-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    padding: 13px;
+    cursor: pointer;
+}
+
+    .dd-item.dd-disabled {
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .dd-item.dd-selected {
+        z-index: 20;
+    }
+
+.dd-item-inner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 5px solid #D63737;
+    border-radius: 5px; 
+    position: relative;
+    box-shadow: 3px 3px 5px 0px #b2b2b2;
+    -moz-box-shadow: 3px 3px 5px 0px #b2b2b2;
+    -webkit-box-shadow: 3px 3px 5px 0px #b2b2b2;
+}

@@ -1,0 +1,36 @@
+C:\Users\user\source\repos\Image Uploader\Image Uploader\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\user\source\repos\Image Uploader\Image Uploader\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\user\source\repos\Image Uploader\Image Uploader\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\user\source\repos\Image Uploader\Image Uploader\bin\Debug\netcoreapp3.1\Image Uploader.exe
+C:\Users\user\source\repos\Image Uploader\Image Uploader\bin\Debug\netcoreapp3.1\Image Uploader.deps.json
+C:\Users\user\source\repos\Image Uploader\Image Uploader\bin\Debug\netcoreapp3.1\Image Uploader.runtimeconfig.json
+C:\Users\user\source\repos\Image Uploader\Image Uploader\bin\Debug\netcoreapp3.1\Image Uploader.runtimeconfig.dev.json
+C:\Users\user\source\repos\Image Uploader\Image Uploader\bin\Debug\netcoreapp3.1\Image Uploader.dll
+C:\Users\user\source\repos\Image Uploader\Image Uploader\bin\Debug\netcoreapp3.1\Image Uploader.pdb
+C:\Users\user\source\repos\Image Uploader\Image Uploader\bin\Debug\netcoreapp3.1\Image Uploader.Views.dll
+C:\Users\user\source\repos\Image Uploader\Image Uploader\bin\Debug\netcoreapp3.1\Image Uploader.Views.pdb
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.AssemblyInfo.cs
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.RazorAssemblyInfo.cache
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.RazorAssemblyInfo.cs
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.TagHelpers.input.cache
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.TagHelpers.output.cache
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.RazorCoreGenerate.cache
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.RazorTargetAssemblyInfo.cache
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.RazorTargetAssemblyInfo.cs
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.Views.pdb
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\staticwebassets\Image Uploader.StaticWebAssets.Manifest.cache
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\staticwebassets\Image Uploader.StaticWebAssets.xml
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.dll
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.pdb
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.genruntimeconfig.cache
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.csproj.CopyComplete
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.MvcApplicationPartsAssemblyInfo.cache

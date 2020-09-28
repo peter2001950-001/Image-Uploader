@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+
+    <div class="m-container">
+        <div class="m-alert" style="opacity: 0"></div>
+        <div class="m-sides">
+            <div class="m-left-side">
+                <div class="m-image-upload-box">
+                    <input type="file" name="photo" id="upload-photo" multiple />
+                    <button class="m-image-upload-btn">
+                        <img src="~/image-icon.jpg" />
+                        <span>Add images</span>
+                    </button>
+                </div>
+                <div class="m-left-controlls">
+                    <button class="m-button disabled" id="upload">Upload</button>
+                    <button class="m-button disabled" id="clearAll">Clear All</button>
+                </div>
+            </div>
+            <div class="m-right-side">
+                <div class="m-image-cards drag-container">
+                    <div id="dragDrop"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/dragscript.js"></script>
+</body>
+</html>

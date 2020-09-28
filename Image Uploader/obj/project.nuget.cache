@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "R/gM42Vu2cL5IhkOIJYztyBoI/kitmUFa6YowpsYlpevEjL/Tp2EDV9/idkQu8QsJKQZodm/y9HqbNoXulKQkQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\Image Uploader\\Image Uploader\\Image Uploader.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
