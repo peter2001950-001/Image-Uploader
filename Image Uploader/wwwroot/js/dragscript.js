@@ -33,7 +33,6 @@ var dragViewModel = (function () {
 	}
 	function setOrderChangeCallback(func) {
 		this.orderChangeCallback = func;
-		console.log(func);
 		this.orderChangeCallback();
     }
 
@@ -76,7 +75,6 @@ var dragViewModel = (function () {
 	function deleteImage(element) {
 		imageUploaderViewModel.deleteImage(element.target.dataset.id);
 		var index = getIndexOfImageId(element.target.dataset.id);
-		console.log(element);
 		_listedImageIds.splice(index, 1);
 		$(".dd-item[data-image-id=" + element.target.dataset.id + "]").remove();
 	
@@ -226,7 +224,7 @@ var dragViewModel = (function () {
 		_selectedImageElement = null;
 		_originalClickCoords = null;
 
-		imageUploaderViewModel.imageOrderChange(_listedImageIds);
+		//imageUploaderViewModel.imageOrderChange(_listedImageIds);
 
 		arrangeItems();
 
@@ -262,8 +260,12 @@ var dragViewModel = (function () {
 				return i;
 
 	}
+	function getListedImageIds() {
+		return _listedImageIds;
+    }
 	return {
 		loadImages: loadImages,
-		addCallback: setOrderChangeCallback
+		addCallback: setOrderChangeCallback,
+		getListedImageIds: getListedImageIds
     }
 })();

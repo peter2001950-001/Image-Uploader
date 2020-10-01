@@ -67,12 +67,17 @@
     margin: 0;
 }
 .m-alert {
-    background: #ff8282;
     padding: 14px;
     color: white;
     font-size: 17px;
     margin: 10px 0;
     transition: opacity linear 0.5s;
+}
+.m-alert-danger {
+    background: #ff8282;
+}
+.m-alert-success {
+    background: #ff8282;
 }
 #upload-photo {
     opacity: 0;

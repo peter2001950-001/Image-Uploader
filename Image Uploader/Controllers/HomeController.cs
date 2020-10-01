@@ -44,77 +44,85 @@ namespace Image_Uploader.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
         [HttpPost]
-        public async Task<IActionResult> Upload(IList<IFormFile> files)
+        public async Task<IActionResult> Upload(IList<IFormFile> files, string imageIds)
         {
             var errors = false;
             var modelsCount = GetDbModals().Count;
-            foreach (IFormFile source in files)
+            var result = new List<object>();
+            var imageIdArray = imageIds.Split('|');
+            if (imageIdArray.Length == files.Count+1)
             {
-                if (source == null || source.Length == 0)
-                    return Content("file not selected");
-
-                if (source.ContentType == "image/png" || source.ContentType == "image/jpeg" || source.ContentType == "image/gif")
+                for (int i = 0; i < files.Count; i++)
                 {
-                    using var image = Image.FromStream(source.OpenReadStream());
-                    if (image.Width < 9000 && image.Height < 9000)
-                    {
-                        if (modelsCount < 12)
-                        {
-                            var guid = System.Guid.NewGuid().ToString();
-                            var newFileName = guid + Path.GetExtension(source.FileName);
-                            var photoDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/" + PhotoFolder);
-                            if (!Directory.Exists(photoDirectory))
-                            {
-                                Directory.CreateDirectory(photoDirectory);
-                            }
-                            var path = Path.Combine(photoDirectory, newFileName);
-                            AddFile(newFileName, guid);
+                    var source = files[i];
+                    if (source == null || source.Length == 0)
+                        return Content("file not selected");
 
-                            using (var stream = new FileStream(path, FileMode.Create))
+                    if (source.ContentType == "image/png" || source.ContentType == "image/jpeg" || source.ContentType == "image/gif")
+                    {
+                        using var image = Image.FromStream(source.OpenReadStream());
+                        if (image.Width < 9000 && image.Height < 9000)
+                        {
+                            if (modelsCount < 12)
                             {
-                                await source.CopyToAsync(stream);
+                                var guid = "2" + System.Guid.NewGuid().ToString();
+                                var newFileName = guid + Path.GetExtension(source.FileName);
+                                var photoDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/" + PhotoFolder);
+                                if (!Directory.Exists(photoDirectory))
+                                {
+                                    Directory.CreateDirectory(photoDirectory);
+                                }
+                                var path = Path.Combine(photoDirectory, newFileName);
+                                AddFile(newFileName, guid);
+
+                                using (var stream = new FileStream(path, FileMode.Create))
+                                {
+                                    await source.CopyToAsync(stream);
+                                }
+                                using (Image bitmap = Bitmap.FromFile(path))
+                                {
+                                    var newPhoto = MakeSquarePhoto(new Bitmap(bitmap), 200);
+                                    var thumbnailDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/" + PhotoThumbnailFolder);
+                                    if (!Directory.Exists(thumbnailDirectory))
+                                    {
+                                        Directory.CreateDirectory(thumbnailDirectory);
+                                    }
+                                    var pathThumbnail = Path.Combine(thumbnailDirectory, newFileName);
+                                    using (var stream = new FileStream(pathThumbnail, FileMode.Create))
+                                    {
+                                        newPhoto.Save(stream, ImageFormat.Jpeg);
+                                    }
+                                    newPhoto.Dispose();
+                                    modelsCount++;
+                                    result.Add(new { oldId = imageIdArray[i], newId = guid });
+                                }
                             }
-                            using (Image bitmap = Bitmap.FromFile(path))
+                            else
                             {
-                                var newPhoto = MakeSquarePhoto(new Bitmap(bitmap), 200);
-                                var thumbnailDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/" + PhotoThumbnailFolder);
-                                if (!Directory.Exists(thumbnailDirectory))
-                                {
-                                    Directory.CreateDirectory(thumbnailDirectory);
-                                }
-                                var pathThumbnail = Path.Combine(thumbnailDirectory, newFileName);
-                                using (var stream = new FileStream(pathThumbnail, FileMode.Create))
-                                {
-                                    newPhoto.Save(stream, ImageFormat.Jpeg);
-                                }
-                                newPhoto.Dispose();
-                                modelsCount++;
+                                return Json(new { status = "MAX" });
                             }
                         }
                         else
                         {
-                            return Json(new { status = "MAX" });
+                            errors = true;
+
                         }
                     }
                     else
                     {
                         errors = true;
-
                     }
+                }
+                if (errors)
+                {
+                    return Json(new { status = "ERR" });
                 }
                 else
                 {
-                    errors = true;
+                    return Json(new { status = "OK", items = result });
                 }
             }
-            if (errors)
-            {
-                return Json(new { status = "ERR" });
-            }
-            else
-            {
-                return Json(new { status = "OK" });
-            }
+            return Json(new { status = "ERR" });
         }
         public JsonResult LoadImages()
         {

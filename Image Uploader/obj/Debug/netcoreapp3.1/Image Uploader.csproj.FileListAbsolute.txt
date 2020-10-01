@@ -34,3 +34,4 @@ C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1
 C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.csproj.CopyComplete
 C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\source\repos\Image Uploader\Image Uploader\obj\Debug\netcoreapp3.1\Image Uploader.csprojAssemblyReference.cache
