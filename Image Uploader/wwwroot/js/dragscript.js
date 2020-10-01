@@ -1,12 +1,10 @@
-﻿
-
-var dragViewModel = (function () {
+﻿var dragViewModel = (function () {
 
 	var _doc = window.document;
 
 	var _numOfImageSlots = 12,
 		_numOfImagesPerRow = 5,
-		_imageMarginBottom = 30;
+		_imageMarginBottom = 20;
 
 	var _imageAspectWidth = 100,
 		_imageAspectHeight = 100;
@@ -65,7 +63,7 @@ var dragViewModel = (function () {
 			item = _doc.createElement('div');
 
 			item.setAttribute('class', 'dd-slot');
-			item.setAttribute('style', 'width:' + (100 / _numOfImagesPerRow) + '%;padding-bottom:' + ((100 / _numOfImagesPerRow) * (_imageAspectHeight / _imageAspectWidth)) + '%;margin-bottom:' + _imageMarginBottom + 'px;');
+			item.setAttribute('style', 'width:' + (100 / _numOfImagesPerRow) + '%;padding-bottom:' + ((100 / _numOfImagesPerRow) * (_imageAspectHeight / _imageAspectWidth)) + '%;margin-bottom:' + _imageMarginBottom + 'px;' );
 
 			wrap.appendChild(item);
 
@@ -224,15 +222,12 @@ var dragViewModel = (function () {
 		_selectedImageElement = null;
 		_originalClickCoords = null;
 
-		//imageUploaderViewModel.imageOrderChange(_listedImageIds);
-
 		arrangeItems();
 
 	}
 
 	function getSlotIdByCoords(coords) {
 
-		// Get the current slot being hovered over
 		for (var id in _imageSlots) {
 
 			var slot = _imageSlots[id];

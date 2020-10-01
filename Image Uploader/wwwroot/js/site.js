@@ -1,14 +1,7 @@
 ﻿var imageUploaderViewModel = (function () {
     const inputElement = document.getElementById("upload-photo");
     inputElement.addEventListener("change", handleFiles, false);
-    function toBase64(file) {
-        return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onload = () => resolve(reader.result);
-            reader.onerror = error => reject(error);
-        })
-    };
+   
     var excludeFileList = [];
     var fileList = [];
     var fileObjects = [];
@@ -17,8 +10,7 @@
     async function handleFiles() {
         console.log(imageCount);
         if (imageCount <= 12) {
-            fileList = this.files; /* now you can work with the file list */
-
+            fileList = this.files; 
             for (var i = 0; i < this.files.length; i++) {
                 if (this.files[i].size > 12582912) {
                     excludeFileList.push(this.files[i].name);
@@ -168,7 +160,7 @@
                 url: "/home/deleteImage",
                 data: { 'imageId': id },
                 success: function (data) {
-                    imageCount = 0;
+                    imageCount = data.items.length;
                 }
             });
         }
@@ -212,6 +204,14 @@
             return v.toString(16);
         });
     }
+    function toBase64(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = error => reject(error);
+        })
+    };
 
     loadImages();
     return {
